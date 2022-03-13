@@ -1,0 +1,181 @@
+<div class="header-navbar navbar-expand-sm navbar navbar-horizontal navbar-fixed navbar-light navbar-without-dd-arrow"
+    role="navigation" data-menu="menu-wrapper">
+    <div class="navbar-header d-xl-none d-block">
+        <ul class="nav navbar-nav flex-row">
+            <li class="nav-item mr-auto"><a class="navbar-brand" href="index.html">
+                    <div class="brand-logo"><img class="logo"
+                            src="{{ asset('app-assets/images/logo/logo.png') }}" /></div>
+                    <h2 class="brand-text mb-0">Frest</h2>
+                </a></li>
+            <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i
+                        class="bx bx-x d-block d-xl-none font-medium-4 primary toggle-icon"></i></a></li>
+        </ul>
+    </div>
+    <div class="shadow-bottom"></div>
+    <!-- Horizontal menu content-->
+    <div class="navbar-container main-menu-content" data-menu="menu-container">
+        <!-- include includes/mixins-->
+        <ul class="nav navbar-nav" id="main-menu-navigation" data-menu="menu-navigation" data-icon-style="filled">
+            @if (auth()->user()->level == 1)
+                <li><a class="dropdown-toggle nav-link" href="{{ route('home') }}"><i class="menu-livicon"
+                            data-icon="desktop"></i><span data-i18n="Dashboard">Dashboard</span></a></li>
+                <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="#"
+                        data-toggle="dropdown"><i class="menu-livicon" data-icon="briefcase"></i><span>Majamenen
+                            Enterprise</span></a>
+                    <ul class="dropdown-menu">
+                        <li data-menu=""><a class="dropdown-item align-items-center" href="#" data-toggle="dropdown"><i
+                                    class="bx bx-right-arrow-alt"></i>Web Publikasi</a> </li>
+                        <li data-menu=""><a class="dropdown-item align-items-center"
+                                href="{{ route('absensiswa.index') }}" data-toggle="dropdown"><i
+                                    class="bx bx-right-arrow-alt"></i>Absensi Siswa</a> </li>
+                        <li data-menu=""><a class="dropdown-item align-items-center" href="{{ route('absen.index') }}"
+                                data-toggle="dropdown"><i class="bx bx-right-arrow-alt"></i>Absensi Guru</a> </li>
+                        <li data-menu=""><a class="dropdown-item align-items-center" href="#" data-toggle="dropdown"><i
+                                    class="bx bx-right-arrow-alt"></i>Perpustakaan</a> </li>
+                        <li data-menu=""><a class="dropdown-item align-items-center" href="#" data-toggle="dropdown"><i
+                                    class="bx bx-right-arrow-alt"></i>Pengadaan Barang & Jasa</a> </li>
+
+                    </ul>
+                </li>
+
+                <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="#"
+                        data-toggle="dropdown"><i class="menu-livicon" data-icon="briefcase"></i><span>Tata
+                            Usaha</span></a>
+                    <ul class="dropdown-menu">
+                        <li data-menu=""><a class="dropdown-item align-items-center"
+                                href="{{ route('gedung.index') }}" data-toggle="dropdown"><i
+                                    class="bx bx-right-arrow-alt"></i>Gedung</a> </li>
+                        <li data-menu=""><a class="dropdown-item align-items-center" href="{{ route('ruang.index') }}"
+                                data-toggle="dropdown"><i class="bx bx-right-arrow-alt"></i>Ruangan</a> </li>
+                        <li data-menu=""><a class="dropdown-item align-items-center"
+                                href="{{ route('jabatan.index') }}" data-toggle="dropdown"><i
+                                    class="bx bx-right-arrow-alt"></i>Jabatan</a> </li>
+                        <li data-menu=""><a class="dropdown-item align-items-center"
+                                href="{{ route('kurikulum.index') }}" data-toggle="dropdown"><i
+                                    class="bx bx-right-arrow-alt"></i>Kurikulum</a> </li>
+                        <li data-menu=""><a class="dropdown-item align-items-center" href="{{ route('tahun.index') }}"
+                                data-toggle="dropdown"><i class="bx bx-right-arrow-alt"></i>Tahun Ajaran</a> </li>
+                        <li data-menu=""><a class="dropdown-item align-items-center" href="{{ route('kelas.index') }}"
+                                data-toggle="dropdown"><i class="bx bx-right-arrow-alt"></i>Kelas</a> </li>
+                        <li data-menu=""><a class="dropdown-item align-items-center"
+                                href="{{ route('mapel.index') }}" data-toggle="dropdown"><i
+                                    class="bx bx-right-arrow-alt"></i>Mata Pelajaran</a> </li>
+                        <li data-menu=""><a class="dropdown-item align-items-center"
+                                href="{{ route('tipeujian.index') }}" data-toggle="dropdown"><i
+                                    class="bx bx-right-arrow-alt"></i>Tipe Ujian</a> </li>
+                        <li data-menu=""><a class="dropdown-item align-items-center" href="#" data-toggle="dropdown"><i
+                                    class="bx bx-right-arrow-alt"></i>Kegiatan</a> </li>
+                    </ul>
+                </li>
+
+
+
+                <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="#"
+                        data-toggle="dropdown"><i class="menu-livicon" data-icon="briefcase"></i><span>Data
+                            Master</span></a>
+                    <ul class="dropdown-menu">
+                        <li data-menu=""><a class="dropdown-item align-items-center" href="{{ route('guru.index') }}"
+                                data-toggle="dropdown"><i class="bx bx-right-arrow-alt"></i>Data Guru</a> </li>
+                        <li data-menu=""><a class="dropdown-item align-items-center"
+                                href="{{ route('siswa.index') }}" data-toggle="dropdown"><i
+                                    class="bx bx-right-arrow-alt"></i>Rombongan Belajar</a> </li>
+                        <li data-menu=""><a class="dropdown-item align-items-center" href="{{ route('gaji.index') }}"
+                                data-toggle="dropdown"><i class="bx bx-right-arrow-alt"></i>Gaji</a> </li>
+                        <li data-menu=""><a class="dropdown-item align-items-center"
+                                href="{{ route('gajimonth.index') }}" data-toggle="dropdown"><i
+                                    class="bx bx-right-arrow-alt"></i>Gaji Bulanan</a> </li>
+                        <li data-menu=""><a class="dropdown-item align-items-center" href="{{ route('list.index') }}"
+                                data-toggle="dropdown"><i class="bx bx-right-arrow-alt"></i>Pengguna</a> </li>
+                        <li data-menu=""><a class="dropdown-item align-items-center"
+                                href="{{ route('list.create') }}" data-toggle="dropdown"><i
+                                    class="bx bx-right-arrow-alt"></i>Tambah Pengguna</a> </li>
+                    </ul>
+                </li>
+
+                <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="#"
+                        data-toggle="dropdown"><i class="menu-livicon"
+                            data-icon="briefcase"></i><span>Nilai</span></a>
+                    <ul class="dropdown-menu">
+                        <li data-menu=""><a class="dropdown-item align-items-center"
+                                href="{{ route('nilaimin.index') }}" data-toggle="dropdown"><i
+                                    class="bx bx-right-arrow-alt"></i>Nilai Minimal</a> </li>
+                        <li data-menu=""><a class="dropdown-item align-items-center"
+                                href="{{ route('nilai_ttp.index') }}" data-toggle="dropdown"><i
+                                    class="bx bx-right-arrow-alt"></i>Nilai Tetapan</a> </li>
+                        <li data-menu=""><a class="dropdown-item align-items-center"
+                                href="{{ route('entrynilai.create') }}" data-toggle="dropdown"><i
+                                    class="bx bx-right-arrow-alt"></i>Entry Nilai</a> </li>
+                        <li data-menu=""><a class="dropdown-item align-items-center"
+                                href="{{ route('entrynilai.ubah') }}" data-toggle="dropdown"><i
+                                    class="bx bx-right-arrow-alt"></i>Ubah Nilai</a> </li>
+                        <li data-menu=""><a class="dropdown-item align-items-center" href="#" data-toggle="dropdown"><i
+                                    class="bx bx-right-arrow-alt"></i>Nilai Semester</a> </li>
+                    </ul>
+                </li>
+
+                <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="#"
+                        data-toggle="dropdown"><i class="menu-livicon"
+                            data-icon="briefcase"></i><span>Laporan</span></a>
+                    <ul class="dropdown-menu">
+                        <li data-menu=""><a class="dropdown-item align-items-center"
+                                href="{{ route('lpr.nilai.index') }}" data-toggle="dropdown"><i
+                                    class="bx bx-right-arrow-alt"></i>Nilai</a> </li>
+                        <li data-menu=""><a class="dropdown-item align-items-center"
+                                href="{{ route('lpr_guru.index') }}" data-toggle="dropdown"><i
+                                    class="bx bx-right-arrow-alt"></i>Kehadiran Guru</a> </li>
+                    </ul>
+                </li>
+
+
+
+                <li><a class="dropdown-toggle nav-link" href="{{ route('home') }}"><i class="menu-livicon"
+                            data-icon="desktop"></i><span data-i18n="Dashboard">Dokumentasi</span></a></li>
+
+                {{-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- --}}
+            @elseif(auth()->user()->level == 2)
+                <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="#"
+                        data-toggle="dropdown"><i class="menu-livicon" data-icon="comments"></i><span>Menu User /
+                            guru</span></a>
+                    <ul class="dropdown-menu">
+                        <li data-menu=""><a class="dropdown-item align-items-center" href="{{ route('home') }}"
+                                data-toggle="dropdown"><i class="bx bx-right-arrow-alt"></i>Lihat Pengguna</a>
+                        <li data-menu=""><a class="dropdown-item align-items-center" href="#" data-toggle="dropdown"><i
+                                    class="bx bx-right-arrow-alt"></i>Tambah Pengguna</a>
+                        </li>
+                    </ul>
+                </li>
+
+                {{-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- --}}
+            @elseif(auth()->user()->level == 3)
+                <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="#"
+                        data-toggle="dropdown"><i class="menu-livicon" data-icon="comments"></i><span>Menu
+                            TU</span></a>
+                    <ul class="dropdown-menu">
+                        <li data-menu=""><a class="dropdown-item align-items-center" href="{{ route('home') }}"
+                                data-toggle="dropdown"><i class="bx bx-right-arrow-alt"></i>Lihat Pengguna</a>
+                        <li data-menu=""><a class="dropdown-item align-items-center" href="#" data-toggle="dropdown"><i
+                                    class="bx bx-right-arrow-alt"></i>Tambah Pengguna</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                {{-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- --}}
+            @elseif(auth()->user()->level == 4)
+                <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="#"
+                        data-toggle="dropdown"><i class="menu-livicon" data-icon="comments"></i><span>Menu
+                            Siswa</span></a>
+                    <ul class="dropdown-menu">
+                        <li data-menu=""><a class="dropdown-item align-items-center" href="{{ route('home') }}"
+                                data-toggle="dropdown"><i class="bx bx-right-arrow-alt"></i>Lihat Pengguna</a>
+                        <li data-menu=""><a class="dropdown-item align-items-center" href="#" data-toggle="dropdown"><i
+                                    class="bx bx-right-arrow-alt"></i>Tambah Pengguna</a>
+                        </li>
+                    </ul>
+                </li>
+            @endif
+
+        </ul>
+    </div>
+    <!-- /horizontal menu content-->
+</div>
